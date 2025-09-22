@@ -1,0 +1,58 @@
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~$ cd /home/bvishvak/Documents/week1
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ ls
+index.html  week1.html
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git init
+Reinitialized existing Git repository in /home/bvishvak/Documents/week1/.git/
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git branch -M main
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git add index.html
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git commit -m "Initial commit"
+[main 08f2c4f] Initial commit
+ 1 file changed, 17 insertions(+)
+ create mode 100644 index.html
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git checkout -b feature-form
+Switched to a new branch 'feature-form'
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git add index.html
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git commit -m "Added registration form"
+On branch feature-form
+nothing to commit, working tree clean
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git checkout -b conflict-branch
+Switched to a new branch 'conflict-branch'
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git add index.html
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git commit -m "Different changes to create conflict"
+On branch conflict-branch
+nothing to commit, working tree clean
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git merge feature-form
+Already up to date.
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git merge conflict-branch
+Already up to date.
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git add index.html
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git commit -m "Registration form"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git remote add origin https://github.com/Vishvak-ai/FEDF-Insem-1.git
+error: remote origin already exists.
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git branch -M main
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ git push -u origin main
+Username for 'https://github.com': Vishvak-ai
+Password for 'https://Vishvak-ai@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 523 bytes | 523.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Vishvak-ai/FEDF.git
+   e05dee9..08f2c4f  main -> main
+branch 'main' set up to track 'origin/main'.
+bvishvak@bvishvak-VivoBook-ASUSLaptop-K3402ZA:~/Documents/week1$ 
